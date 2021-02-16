@@ -252,7 +252,7 @@ tab[selected]:-moz-window-inactive {
 	content: "";
 	display: block;
 	background-image: var(#userContext-icons:--identity-icon);
-	background: var( --identity-tab-color);
+	background: var(--identity-tab-color);
 	-moz-context-properties: fill;
 	fill: var(--identity-icon-color);
 	background-size: contain;
