@@ -146,32 +146,32 @@ tab[selected]:-moz-window-inactive {
 } */
 
 /* Close tab button */
-:root {	
+:root {
 	--gnome-fill-icon: red !important;
 }
 .tab-close-button {
 	-moz-appearance: none !important;
 	border: 1px solid transparent;
 	box-sizing: content-box; /* Avoid deformation on flexbox */
-	border-radius: 5px;
+	border-radius: 5px !important;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	fill: var(--gnome-toolbar-color) !important;
 	fill-opacity: 1 !important;
-	-moz-context-properties: fill, fill-opacity;
-	height: 16px;
-	opacity: .3;
-	padding: 2px;
-	width: 16px;
+	-moz-context-properties: fill, fill-opacity !important;
+	height: 16px !important;
+	opacity: .3 !important;
+	padding: 2px !important;
+	width: 16px !important;
 }
 :root:-moz-window-inactive .tab-close-button:not(#hack) {
 	opacity: .18 !important;
 }
-:root:not(:-moz-window-inactive) .tab-close-button:hover {	
+:root:not(:-moz-window-inactive) .tab-close-button:hover {
 	background-image: var(--gnome-button-background);
 	box-shadow: var(--gnome-button-box-shadow);
 	border: 1px solid var(--gnome-button-border-color);
 	border-bottom-color: var(--gnome-button-border-accent-color);
-	opacity: 1;
+	opacity: 1 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:active {
 	background-image: var(--gnome-button-active-background) !important;
@@ -255,7 +255,7 @@ tab[selected]:-moz-window-inactive {
 	content: "";
 	display: block;
 	background-image: var(#userContext-icons:--identity-icon);
-	background: var(--identity-tab-color);
+	background: var( --identity-tab-color);
 	-moz-context-properties: fill;
 	fill: var(--identity-icon-color);
 	background-size: contain;
@@ -269,8 +269,8 @@ tab[selected]:-moz-window-inactive {
 }
 
 .tabbrowser-tab[class*="identity-color-"][pinned] .tab-content::before,
-.tabbrowser-tab[class*="identity-color-"][image] .tab-content::before, 
-.tabbrowser-tab[class*="identity-color-"][busy] .tab-content::before, 
+.tabbrowser-tab[class*="identity-color-"][image] .tab-content::before,
+.tabbrowser-tab[class*="identity-color-"][busy] .tab-content::before,
 .tabbrowser-tab[class*="identity-color-"][progress] .tab-content::before {
 	right: -10px;
 	top: -8px;
@@ -335,7 +335,7 @@ tab[selected]:-moz-window-inactive {
 
 	tab, tab[selected] {
 		border-left: 0px !important;	/* this is a bodge */
-		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;	
+		border-right: 1px solid var(--gnome-tabbar-tab-border-color-new) !important;
 	}
 
 	/* Adjust Margins */
@@ -345,18 +345,17 @@ tab[selected]:-moz-window-inactive {
 		margin-right: 0px !important;
 	}
 
-
 	/* Close Button Styling */
 
 	.tab-close-button {
 		border-radius: 99px;
 		opacity: 1;
 	}
-	:root:not(:-moz-window-inactive) .tab-close-button:hover {	
+	:root:not(:-moz-window-inactive) .tab-close-button:hover {
 		background-image: none;
 		background-size: 24px;
 		background-color: var(--gnome-tabbar-close-hover);
-		box-shadow: 0px 0px transparent; 
+		box-shadow: 0px 0px transparent;
 	    border: 0px solid transparent;
 	    border-bottom-color: transparent;
 	}
@@ -369,4 +368,4 @@ tab[selected]:-moz-window-inactive {
 	.tabbrowser-tab:hover .tab-close-button {
 		visibility: visible;
 	}
-}	
+}
